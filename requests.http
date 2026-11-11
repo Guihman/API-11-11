@@ -1,0 +1,50 @@
+@baseUrl = http://localhost:3000
+
+### Rota raiz
+GET {{baseUrl}}/
+
+### Resumo da API
+GET {{baseUrl}}/api
+
+### Health check
+GET {{baseUrl}}/api/health
+
+### Listar leituras com paginação
+GET {{baseUrl}}/api/leituras?page=1&limit=5
+
+### Listar leituras por estação
+GET {{baseUrl}}/api/leituras?station_id=EM-ARACATUBA-01&page=1&limit=10
+
+### Listar leituras por período
+GET {{baseUrl}}/api/leituras?data_inicio=2026-01-01&data_fim=2026-01-03&page=1&limit=20
+
+### Buscar leitura por ID
+GET {{baseUrl}}/api/leituras/1
+
+### Criar leitura
+POST {{baseUrl}}/api/leituras
+Content-Type: application/json
+
+{
+  "station_id": "EM-TESTE-01",
+  "timestamp": "2026-06-01T08:00:00-03:00",
+  "temperature_c": 26.7,
+  "humidity_pct": 72.4
+}
+
+### Atualizar leitura
+PUT {{baseUrl}}/api/leituras/1
+Content-Type: application/json
+
+{
+  "station_id": "EM-TESTE-01",
+  "timestamp": "2026-06-01T09:00:00-03:00",
+  "temperature_c": "27,5",
+  "humidity_pct": "70,2"
+}
+
+### Excluir uma leitura
+DELETE {{baseUrl}}/api/leituras/1
+
+### Excluir todas as leituras
+DELETE {{baseUrl}}/api/leituras

@@ -1,0 +1,3 @@
+Salve aqui a captura de tela da execução da coleção no Postman com os testes aprovados.
+Nome sugerido: teste-postman.png
+A captura precisa ser feita no seu computador após iniciar a API e executar a coleção.
